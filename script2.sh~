@@ -1,0 +1,21 @@
+read -p "Dime la primera ciudad" ciudad1
+read -p "Dime la segunda ciudad" ciudad2
+
+contador=1
+maxLineas=`cat instructores.txt | wc -l`
+
+while [ $contador -le $maxLineas ];do
+    
+    ciudades=`cat instructores.txt | head -${contador} | tail -1 | awk '{print $4}'`
+
+echo "ciudades: $ciudades"
+contador=$(($contador+1))
+
+
+
+
+
+
+
+
+done
