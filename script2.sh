@@ -1,5 +1,5 @@
-read -p "Dime la primera ciudad" ciudad1
-read -p "Dime la segunda ciudad" ciudad2
+read -p "Dime la primera ciudad: " ciudad1
+read -p "Dime la segunda ciudad: " ciudad2
 
 contador=1
 contadorciudad1=0
@@ -19,14 +19,8 @@ while [ $contador -le $maxLineas ];do
     fi
 contador=$(($contador+1))
 done
-
-echo "Ciudad1: $contadorciudad1"
-echo "Ciudad2: $contadorciudad2"
-
-
-
-
-
-
-
-done
+ 
+echo "Ciudad 1: $ciudad1"
+echo "Numero 1: $contadorciudad1"
+echo "Ciudad 2: $ciudad2"
+echo "Numero 2: $contadorciudad2"
