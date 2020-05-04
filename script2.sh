@@ -20,7 +20,13 @@ while [ $contador -le $maxLineas ];do
 contador=$(($contador+1))
 done
  
-echo "Ciudad 1: $ciudad1"
-echo "Numero 1: $contadorciudad1"
-echo "Ciudad 2: $ciudad2"
-echo "Numero 2: $contadorciudad2"
+if [ $contadorciudad1 -eq $contadorciudad2 ]; then
+    echo "Ambas ciudades tienen $contadorciudad1 instructores"
+else
+    if [ $contadorciudad1 -gt $contadorciudad2 ]; then
+	echo "La ciudad $ciudad1 tiene más instructores que $ciudad2"
+    else
+	echo "La ciudad $ciudad2 tiene más instructores que $ciudad1"
+    fi
+
+fi
